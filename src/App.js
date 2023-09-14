@@ -1,23 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import Accordion from "./components/Accordion";
 
 function App() {
+  const questions = [
+    {
+      title: "Is this a good product?",
+      body: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Distinctio vitae ipsum consequuntur facere modi optio ipsam soluta? Cumque ut totam facere hic odio fuga doloribus perferendis molestiae voluptatem vero. Velit!",
+    },
+
+    {
+      title: "How much does it cost?",
+      body: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Distinctio vitae ipsum consequuntur facere modi optio ipsam soluta? Cumque ut totam facere hic odio fuga doloribus perferendis molestiae voluptatem vero. Velit!",
+    },
+    {
+      title: "When can I get it?",
+      body: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Distinctio vitae ipsum consequuntur facere modi optio ipsam soluta? Cumque ut totam facere hic odio fuga doloribus perferendis molestiae voluptatem vero. Velit!",
+    },
+  ];
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <h1>FAQ/Accordion</h1>
+      <Accordion questions={questions} />
     </div>
   );
 }
